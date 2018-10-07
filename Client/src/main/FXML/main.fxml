@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:controller="main.Main_ctr" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Connection">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" text="Login" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Profile">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Change Password" />
+                  <MenuItem mnemonicParsing="false" text="Update Email" />
+                  <MenuItem mnemonicParsing="false" text="Change Descripton" />
+                  <MenuItem mnemonicParsing="false" text="Change Profile pic" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <MenuItem mnemonicParsing="false" text="Report Bug" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="button_send" layoutX="311.0" layoutY="342.0" mnemonicParsing="false" onAction="#sendAction" prefHeight="34.0" prefWidth="123.0" text="Send">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="anonymous" layoutX="311.0" layoutY="319.0" mnemonicParsing="false" text="Send Anonymously" />
+      <Label layoutX="492.0" layoutY="36.0" text="Online Users">
+         <font>
+            <Font name="Consolas" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="text_send" layoutX="14.0" layoutY="319.0" prefHeight="67.0" prefWidth="293.0" style="-fx-background-color: none; -fx-border-color: none;" />
+      <TableView fx:id="user_table" layoutX="450.0" layoutY="53.0" prefHeight="260.0" prefWidth="150.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Image" />
+          <TableColumn prefWidth="75.0" text="Username" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="text_left" layoutX="14.0" layoutY="36.0" prefHeight="273.0" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: none;" />
+      <TextArea fx:id="text_right" layoutX="157.0" layoutY="36.0" prefHeight="273.0" prefWidth="150.0" style="-fx-background-color: none; -fx-border-color: none;" />
+   </children>
+</AnchorPane>
